@@ -1,0 +1,35 @@
+<h3>Informações do Git</h3>
+<hr/>
+
+<div class="btn-group btn-group-toggle" data-toggle="buttons">
+  <label class="btn btn-secondary active">
+    <input type="radio" name="options" id="option1" autocomplete="off" checked (click) = "mudar(true)"> Matheus
+  </label>
+  <label class="btn btn-secondary">
+    <input type="radio" name="options" id="option2" autocomplete="off" (click) = "mudar(false)"> Felipe
+  </label>
+</div>
+
+
+<hr/>
+
+<!-- <button (click) = "mudar(true)">Matheus</button>
+
+<button (click) = "mudar(false)">Felipe</button> -->
+
+<span >
+  <h4 *ngIf="bool == true"> Repositorio Matheus</h4>
+  <h4 *ngIf=" bool == false"> Repositorio Matheus</h4>
+<table border="1">
+    <tr>
+      <th>Nome Do Repositorio</th>
+      <th>Link Para Acessar</th>
+
+    </tr> 
+    <tr *ngFor='let respo of git | async'>
+      <td>{{respo.name}}</td>
+      <td><a href="{{respo.html_url}}" target="_blank">Acessar Repositorio</a></td>
+    </tr>
+  </table>
+</span>
+
